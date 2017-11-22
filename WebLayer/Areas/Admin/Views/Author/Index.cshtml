@@ -1,0 +1,28 @@
+﻿@model BLL.ViewModels.AuthorViewModel
+
+@{
+    ViewBag.Title = "_Authors";
+
+    string links = Html.PageLinks(Model.CurrentPage, Model.TotalPages, x => Url.Action("Index", "Author", new
+    {
+        page = x,
+        pages = Model.Pages,
+        FirstName = Model.Search.FirstName,
+        LastName = Model.Search.LastName
+
+    }));
+}
+
+<h2>Products</h2>
+
+@*@using (Html.BeginForm())
+    {
+        @Html.Partial("_ItemsPerPage", Model)
+    }*@
+@*<p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-info" })
+    </p>*@
+@Html.Raw(links)
+@Html.Partial("_Authors", Model.Authors)
+@Html.Partial("_Search", Model.Search)
+@Html.Raw(links)
