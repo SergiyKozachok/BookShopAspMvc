@@ -47,6 +47,9 @@ namespace BLL.Services
             builder.RegisterType<AccountProvider>().AsSelf().InstancePerRequest();
             builder.RegisterType<AuthorRepository>().As<IAuthorRepository>().InstancePerRequest();
             builder.RegisterType<AuthorProvider>().As<IAuthorProvider>().InstancePerRequest();
+            builder.RegisterType<BookRepository>().As<IBookRepository>().InstancePerRequest();
+            builder.RegisterType<BookProvider>().As<IBookProvider>().InstancePerRequest();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
 
             base.Load(builder);
         }

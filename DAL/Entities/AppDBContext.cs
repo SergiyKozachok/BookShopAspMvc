@@ -25,6 +25,7 @@ namespace DAL.Entities
         }
 
         public DbSet<Author> Authors { get; set; }
+        public DbSet<Book> Books { get; set; }
 
         public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
         {

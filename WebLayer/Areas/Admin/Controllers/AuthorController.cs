@@ -77,9 +77,9 @@ namespace WebBookShop.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Delete(AuthorItemViewModel productDel)
+        public ActionResult Delete(AuthorItemViewModel authorDel)
         {
-            _authorProvider.Delete(productDel.Id);
+            _authorProvider.Delete(authorDel.Id);
             return RedirectToAction("Index");
         }
         // GET: Admin/Author

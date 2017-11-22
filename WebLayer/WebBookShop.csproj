@@ -191,6 +191,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AuthorController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BookController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -229,6 +230,12 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Book\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Book\_Books.cshtml" />
+    <Content Include="Areas\Admin\Views\Book\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Book\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Book\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Book\_Search.cshtml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

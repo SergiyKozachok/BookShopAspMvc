@@ -1,0 +1,24 @@
+﻿@model BLL.ViewModels.BookViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{
+    ViewBag.Title = "_Books";
+
+    string links = Html.PageLinks(Model.CurrentPage, Model.TotalPages, x => Url.Action("Index", "Book", new
+    {
+        page = x,
+        pages = Model.Pages,
+        Title = Model.Search.Title,
+        Author = Model.Search.Author
+
+    }));
+}
+
+@Html.Raw(links)
+@Html.Partial("_Books", Model.Books)
+@Html.Partial("_Search", Model.Search)
+@Html.Raw(links)

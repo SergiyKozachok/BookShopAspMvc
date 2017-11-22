@@ -1,0 +1,54 @@
+﻿@model     IEnumerable<BLL.ViewModels.BookItemViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Index</h2>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pages)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Pages
+                </td>
+                <td>
+                    @item.Author
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.Id})">Edit</a> |
+                    <a href="@Url.Action("Delete", new { id = item.Id})">Delete</a> |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.ActionLink("Create", "Add", "Book")
+
+
