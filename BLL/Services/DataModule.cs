@@ -51,6 +51,8 @@ namespace BLL.Services
             builder.RegisterType<BookProvider>().As<IBookProvider>().InstancePerRequest();
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
 
+            builder.RegisterType<SqlRepository>().As<ISqlRepository>().InstancePerRequest();
+
             base.Load(builder);
         }
     }

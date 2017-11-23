@@ -56,12 +56,14 @@
   <ItemGroup>
     <Compile Include="Entities\AppDBContext.cs" />
     <Compile Include="Entities\Author.cs" />
+    <Compile Include="Entities\BaseModel.cs" />
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\DBInitializer.cs" />
     <Compile Include="Entities\Identity\AppRole.cs" />
     <Compile Include="Entities\Identity\AppUser.cs" />
     <Compile Include="Interfaces\IAppDBContext.cs" />
     <Compile Include="Interfaces\IBookRepository.cs" />
+    <Compile Include="Interfaces\ISqlRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Migrations\201711211430158_Create database.cs" />
     <Compile Include="Migrations\201711211430158_Create database.Designer.cs">
@@ -80,6 +82,7 @@
     <Compile Include="Interfaces\IAuthorRepository.cs" />
     <Compile Include="Repositories\AuthorRepository.cs" />
     <Compile Include="Repositories\BookRepository.cs" />
+    <Compile Include="Repositories\SqlRepository.cs" />
     <Compile Include="Repositories\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>

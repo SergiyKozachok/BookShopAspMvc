@@ -11,7 +11,7 @@ namespace DAL.Repositories
     public class UnitOfWork : IUnitOfWork
     {
         private TransactionScope _transaction;
-        
+
 
         public void CommitTransaction()
         {
@@ -20,7 +20,7 @@ namespace DAL.Repositories
 
         public void Dispose()
         {
-            if(_transaction != null)
+            if (_transaction != null)
                 _transaction.Dispose();
         }
 

@@ -8,18 +8,20 @@ using DAL.Entities;
 
 namespace DAL.Repositories
 {
-    public class BookRepository : IBookRepository
+    public class BookRepository : SqlRepository, IBookRepository
     {
         private readonly IAppDBContext _context;
 
         public BookRepository(IAppDBContext context)
+            : base(context)
         {
             _context = context;
         }
 
         public Book Add(Book book)
         {
-            _context.Set<Book>().Add(book);
+            this.Insert(book);
+            this.SaveChanges();
             return book;
         }
 

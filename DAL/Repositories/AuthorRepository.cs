@@ -9,18 +9,20 @@ using DAL.Interfaces;
 
 namespace DAL.Repositories
 {
-    public class AuthorRepository : IAuthorRepository
+    public class AuthorRepository : SqlRepository, IAuthorRepository
     {
         private readonly IAppDBContext _context;
 
         public AuthorRepository(IAppDBContext context)
+            : base(context)
         {
             _context = context;
         }
 
         public Author Add(Author author)
         {
-            _context.Set<Author>().Add(author);
+            this.Insert(author);
+            this.SaveChanges();
             return author;
         }
 
